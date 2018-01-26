@@ -1,0 +1,7 @@
+<launch>
+	<node name="laser_simulation" pkg="stage_ros" type="stageros" args="/home/artem/simulation/simple.world"/>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d /home/artem/simulation/simulation.rviz" />
+	<node name="controller" pkg="turtlesim" type="turtle_teleop_key">
+		<remap from="/turtle1/cmd_vel" to="/cmd_vel"/>
+	</node>
+</launch>
