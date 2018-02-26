@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
 	std::cout << "+---------------------------------------------------------+" << std::endl;
 	std::cout << "|Press Arrow-buttons to controll and Ctrl+C or Esc to exit|" << std::endl;
 	std::cout << "+---------------------------------------------------------+" << std::endl;
-	while (!(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)||sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)&&sf::Keyboard::isKeyPressed(sf::Keyboard::C)) && ros::ok()) {
+	while (!(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) && ros::ok()) {
 		geometry_msgs::Twist mes;
 		mes.linear.x  = 0;
 		mes.angular.z = 0;
